@@ -27,6 +27,38 @@ liblog.write_to_logs(err, logfile_name)
 
 # Local Functions
 def main():
-    print("Hello World!")
+    score = 0
+    f=0 
+    while f < len(env_json_py["flashcards"]):
+        print("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *")
+        print("Question "+str(f+1))
+        print(env_json_py["flashcards"][f]["Question"])
+        c=0
+        while c < len(env_json_py["flashcards"][0]["Choices"]):
+            print(env_json_py["flashcards"][f]["Choices"][c])
+            c=c+1
+        print("")
+        promptanswer = input("Answer: ")
+        promptanswer = promptanswer.upper()
+        if promptanswer == env_json_py["flashcards"][f]["Answer"]:
+            print("Correct!")
+            print("")
+            print("")
+            score = score+1
+        else:
+            print("Incorrect. The correct answer is "+env_json_py["flashcards"][f]["Answer"])
+            print("")
+            print("")
+        f=f+1
+    
+    print("Your final score is "+str(score)+" out of "+str(len(env_json_py["flashcards"])))
+    perc_score = (score/len(env_json_py["flashcards"]))*100
+    print(str(score)+"/"+str(len(env_json_py["flashcards"]))+" is "+str(perc_score)+"%")
+    print("")
+    min_score = 80
+    if perc_score > min_score:
+        print("Congratulations! You passed!")
+    else:
+        print("To pass you need a minimum of "+str(min_score)+". You failed.")
 
 main()
