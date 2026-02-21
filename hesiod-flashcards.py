@@ -1,8 +1,8 @@
 # Import Hesiod libraries
-from python import lib_general as libgen
-from python import lib_json as libjson
-from python import lib_logs_and_headers as liblog 
-from python import lib_paramiko as libpko 
+from hesiod import lib_general as libgen
+from hesiod import lib_json as libjson
+from hesiod import lib_logs_and_headers as liblog 
+from hesiod import lib_paramiko as libpko 
 
 # Import Standard Python libraries
 import os
@@ -27,6 +27,6 @@ liblog.write_to_logs(err, logfile_name)
 
 # Local Functions
 def main():
-    print "Hello World!"
+    print("Hello World!")
 
 main()
