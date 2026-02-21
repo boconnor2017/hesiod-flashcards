@@ -1,0 +1,18 @@
+{
+    "logs" : {
+        "test.py" : "_test.log",
+        "hesiod-flashcards.py" : "_hesiod-flashcards.log"
+    },
+    "flashcards" : [
+        {
+            "Question" : "What is the main purpose of Project Hesiod?",
+            "Choices" : [
+                "A. Predicts the weather.",
+                "B. Project Hesiod is a git repository with all necessary bodies of work to begin a software development project.",
+                "C. Robots.",
+                "D. I'm not sure. But you should probably pick B."
+            ],
+            "Answer" : "B"
+        }
+    ]
+}
