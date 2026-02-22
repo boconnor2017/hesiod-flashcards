@@ -31,7 +31,7 @@ def main():
     f=0 
     while f < len(env_json_py["flashcards"]):
         print("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *")
-        print("Question "+str(f+1))
+        print("Question "+str(f+1)" of "+str(len(env_json_py["flashcards"])))
         print(env_json_py["flashcards"][f]["Question"])
         c=0
         while c < len(env_json_py["flashcards"][0]["Choices"]):
